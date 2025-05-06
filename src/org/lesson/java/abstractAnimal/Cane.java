@@ -1,6 +1,8 @@
 package org.lesson.java.abstractAnimal;
 
-public class Cane extends AbstactAnimal {
+import org.lesson.java.interfaces.Nuotanti;
+
+public class Cane extends AbstactAnimal implements Nuotanti{
 
     @Override
     public void verso() {
@@ -10,6 +12,11 @@ public class Cane extends AbstactAnimal {
     @Override
     public void mangia() {
         System.out.println("il cane mangia carne");
+    }
+
+    @Override
+    public void nuota() {
+       System.out.println("sto nuotando!!!");
     }
 
     

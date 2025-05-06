@@ -1,6 +1,18 @@
 package org.lesson.java.abstractAnimal;
 
+import org.lesson.java.interfaces.Nuotanti;
+import org.lesson.java.interfaces.Volanti;
+
 public class Main {
+
+
+    public static void faiVolare(Volanti animale) {
+        animale.vola();
+    }
+
+    public static void faiNuotare(Nuotanti animale) {
+        animale.nuota();
+    }
 
     public static void main(String[] args) {
         Aquila marco = new Aquila();
@@ -21,7 +33,17 @@ public class Main {
         cingo.verso();
         cingo.mangia();
 
-       
+        Volanti aquila = new Aquila();
+        faiVolare(aquila);
+
+        Volanti passerotto = new Passerotto();
+        faiVolare(passerotto);
+
+        Nuotanti cane = new Cane();
+        faiNuotare(cane);
+
+        Nuotanti delfino = new Delfino();
+        faiNuotare(delfino);
     }
 
 }
